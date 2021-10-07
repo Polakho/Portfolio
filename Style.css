@@ -1,0 +1,235 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:darksalmon;
+    min-height: 100vh;
+    min-width: 100vh;
+    overflow: scroll;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    justify-content: space-around;
+    scroll-behavior: smooth;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tab{
+    top:0;
+    left:0;
+    position : fixed;
+    display :flex;
+    justify-content: space-between;
+    padding : 20px 40px 0;
+    color : #fff;
+    width: 100%;
+}
+
+.name a{
+    text-decoration: none;
+    color: white;
+}
+.name{
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size:20px;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 0.065em;
+    width:100%;
+
+}
+.tablogos{
+    display: flex;
+    width: 100vh;
+    gap: 4%;
+    flex-direction: row-reverse;
+}
+
+
+main{
+    background-color: salmon;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+    width: 100%;
+
+}
+
+#aboutMe, #home, #contact, #why{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+}
+
+
+.title{
+    color:white;
+    font-family: "Roboto Thin", serif;
+    font-size: 80px;
+}
+
+h2{
+    color:white;
+    font-family: "Roboto Slab", serif;
+    font-size: 30px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:20px;
+}
+
+li{
+    display: block;
+}
+
+li a span{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 50px;
+    height: 5px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+ul, li {
+    list-style-type: none;
+}
+
+/* here */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.l-left {
+    float: left;
+}
+.l-right {
+    float: right;
+}
+.end {
+    margin-top: 30px;
+    font-size: 3em;
+    font-weight: bold;
+    opacity: 0;
+    -webkit-transform: translateY(300px);
+    transform: translateY(300px);
+    transition: opacity, transform 1s, -webkit-transform 1s;
+    transition-delay: 1s;
+}
+
+.header-top {
+
+    height: 70px;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 12;
+    box-sizing: border-box;
+}
+h1 {
+    line-height: 70px;
+    height: 70px;
+}
+h1 a {
+    display: block;
+    padding: 0 10px;
+}
+.toggle-menu {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+}
+.toggle-menu i {
+    position: absolute;
+    display: block;
+    height: 2px;
+    background: white;
+    width: 30px;
+    left: 10px;
+    transition: all .3s;
+}
+.toggle-menu i:nth-child(1) {
+    top: 16px;
+}
+.toggle-menu i:nth-child(2) {
+    top: 24px;
+}
+.toggle-menu i:nth-child(3) {
+    top: 32px;
+}
+
+nav {
+    height: 0;
+    box-sizing: border-box;
+    position: fixed;
+    width: 30px;
+    transition: all 1s;
+    top:50%;
+    left:25px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 50px;
+
+}
+
+.text h1, .text h2, .text .decoLines{
+    display: block;
+    height: 100%;
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: white;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: transparent;
+    box-sizing: border-box;
+    border: 2px solid #212121;
+}
+
+
+
+
+
