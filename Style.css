@@ -63,8 +63,8 @@ main{
 
 }
 
-.section{
-    display:flex;
+#home, #why, #aboutMe, #contact{
+    display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
@@ -120,56 +120,6 @@ ul, li {
 
 /* here */
 
-.clearfix:before,
-.clearfix:after {
-    content: "";
-    display: table;
-}
-.clearfix:after {
-    clear: both;
-}
-.l-left {
-    float: left;
-}
-.l-right {
-    float: right;
-}
-.end {
-    margin-top: 30px;
-    font-size: 3em;
-    font-weight: bold;
-    opacity: 0;
-    -webkit-transform: translateY(300px);
-    transform: translateY(300px);
-    transition: opacity, transform 1s, -webkit-transform 1s;
-    transition-delay: 1s;
-}
-
-.header-top {
-
-    height: 70px;
-    padding: 0 10px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 12;
-    box-sizing: border-box;
-}
-h1 {
-    line-height: 70px;
-    height: 70px;
-}
-h1 a {
-    display: block;
-    padding: 0 10px;
-}
-.toggle-menu {
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    position: relative;
-    top: 10px;
-}
 .toggle-menu i {
     position: absolute;
     display: block;
@@ -229,6 +179,10 @@ nav {
     border: 2px solid #212121;
 }
 
+.fullpage{
+    justify-content: space-between;
+    flex-direction: column;
+}
 
 
 

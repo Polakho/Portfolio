@@ -1,3 +1,2 @@
-
-$('#menu li a').
+console.log($('#fullpage section').attr('id'))
 
