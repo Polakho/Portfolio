@@ -47,11 +47,11 @@
             <section class="section" id="home">
                 <div class="text">
                     <h1 class="title">ARMATYS<br>ALEX</h1>
-                    <div class="decoLines"><span></span><span></span></div>
-                    <h2>Apprentice<br>Developper</h2>
+                    <div class="decoLines"><span></span><span class="secondSpan"></span></div>
+                    <h2>Apprentice<br>Developer</h2>
                 </div>
-                <div id="Image">
-                    <image><img src="Images/alex.png" height="359" width="359" alt=""/></image>
+                <div id="stuff ">
+                    <image><img id="image" src="Images/alex.png" height="359" width="359" alt=""/></image>
 
                 </div>
             </section>
@@ -59,10 +59,10 @@
             <section class="section" id="aboutMe">
                 <div class="text">
                     <h1 class="title">ABOUT ME</h1>
-                    <div class="decoLines"><span></span><span></span></div>
+                    <div class="decoLines"><span></span><span class="secondSpan"></span></div>
                     <h2>I like nature, travels<br>and innovation</h2>
                 </div>
-                <div class="button">
+                <div class=" stuff button">
                     <button>SHOW MORE</button>
                 </div>
             </section>
@@ -70,10 +70,10 @@
             <section class="section" id="why">
                 <div  class="text">
                     <h1 class="title">WHY<br>APPRENTICESHIP ?</h1>
-                    <div class="decoLines"><span></span><span></span></div>
+                    <div class="decoLines"><span></span><span class="secondSpan"></span></div>
                     <h2>Advantages for YOU<br>and ME</h2>
                 </div>
-                <div class="links">
+                <div class="stuff links">
                     <h3>Some links</h3>
                     <button>Aids</button>
                     <button>OPCO</button>
@@ -83,9 +83,9 @@
             <section class="section" id="contact">
                 <div class="text">
                     <h1 class="title">STAY IN<br>CONTACT !</h1>
-                    <div class="decoLines"><span></span><span></span></div>
+                    <div class="decoLines"><span></span><span class="secondSpan"></span></div>
                 </div>
-                <div class="contactLinks">
+                <div class="stuff contactLinks">
                     <div class="logos">
                         <a>Linkedin</a>
                         <a>Gmail</a>
@@ -99,23 +99,25 @@
             </section>
         </div>
     </main>
-    <script src="main.js" type="text/javascript"></script>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js'></script>
     <script src="fullPage.js-master/dist/fullpage.js"></script>
+    <script src="main.js" type="text/javascript"></script>
     <script>
         $('#fullpage').fullpage({
 
             autoScrolling: true,
             recordHistory: true,
+            behavior: 'smooth',
+            menu : '#menu',
             // section
             paddingTop: '3em',
             paddingBottom: '10px',
-
             sectionsColor : ['FA8072FF', 'FA8072FF', 'FA8072FF', 'FA8072FF'],
-            sectionSelector: '.section',
+            sectionSelector: ".section",
+
+
         })
-
-
 
     </script>
 </body>
