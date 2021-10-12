@@ -11,5 +11,7 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="fullPage.js" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="gsap" level="application" />
+    <orderEntry type="library" name="animate.css" level="application" />
   </component>
 </module>
