@@ -1,15 +1,18 @@
-
-body{
-    min-height: 100vh;
-    min-width: 100vh;
-    overflow: scroll;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: burlywood;
+    min-height: 100vh;
+    min-width: 100vh;
     display:flex;
     justify-content: space-around;
     scroll-behavior: smooth;
 }
 
+/** Header **/
 header{
     display:flex;
     justify-content: space-between;
@@ -18,12 +21,12 @@ header{
 }
 
 .tab{
+    margin-top: 20px;
     top:0;
     left:0;
     position : fixed;
     display :flex;
     justify-content: space-between;
-    padding : 20px 40px 0;
     color : #fff;
     width: 100%;
 }
@@ -39,83 +42,45 @@ header{
     font-size:20px;
     font-family: 'Roboto Slab', serif;
     letter-spacing: 0.065em;
-    width:100%;
-
+    width:auto;
+    padding-left: 30px;
 }
 .tablogos{
+    padding-right: 30px;
     display: flex;
-    width: 100vh;
-    gap: 4%;
+    gap: 10%;
     flex-direction: row-reverse;
 }
 
+/** Main **/
+
 main{
-    background-color: salmon;
+    overflow: hidden;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    height:100%;
-    width: 100%;
-
-}
-
-#menu{
-    display: flex;
-    position: fixed;
-    width: 30px;
-    left: 10px;
-    top: 50%;
-    list-style: none;
-    flex-direction: column;
-    justify-content: space-between;
-    gap:20px;
-}
-
-li{
-    display: block;
-}
-
-li a span{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    width: 50px;
-    height: 5px;
-    border-radius: 2px;
-    transition: 0.3s;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-ul, li {
-    list-style-type: none;
-}
-
-.fp-tableCell{
-    display: flex;
-    justify-content: space-between;
-    align-content: baseline;
     height: 100vh;
     width: 100%;
-    margin-left: 100px;
-    margin-right: 100px;
-    border: black solid 5px;
-    z-index: 1;
+}
+
+/** Section **/
+section{
+    height: 100vh;
+    width:100%;
+}
+.section{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 13%;
 }
 
 .text{
     display: flex;
-    overflow: hidden;
     flex-direction: column;
-    justify-content: center;
-    gap: 15px;
-    border: black solid 5px;
-    width:100vh;
-    z-index: 3;
+    gap :10%;
 
 }
 
@@ -123,27 +88,26 @@ ul, li {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: black solid 5px;
-    width: 100vh;
-    z-index: 2;
+    margin-right: 25%;
+
 }
 
-.hidden{
-    display:none;
+#image{
+    display: inline-block;
+    margin-right: 50px;
 }
 
 h2{
     color:white;
     font-family: "Roboto Slab", serif;
     font-size: 3em;
-
 }
 
 .title{
+    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
     color:white;
     font-family: "Roboto Thin", serif;
     font-size: 4em;
-
 }
 
 .decoLines{
@@ -163,12 +127,53 @@ h2{
 .decoLines .secondSpan{
     margin-left: 50px;
 }
+/** MENU **/
 
-#image{
-    display:block;
-    position:relative;
-    top: 20%;
+#fp-nav{
+    display: flex;
+    position: fixed;
+    width: auto;
+    left: 10px;
+    top: 50%;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:20px;
 }
 
+#fp-nav li a span{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 50px;
+    height: 5px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+#fp-nav li a.active span{
+    width: 80px;
+}
+
+#fp-nav li a{
+    text-decoration: none;
+}
+
+#fp-nav .fp-sr-only{
+    display: none;
+}
+
+a :hover{
+    opacity: 0.5;
+}
+
+/** Animation **/
+
+.black{
+    color: black;
+background-color: black;
+}
 
 
