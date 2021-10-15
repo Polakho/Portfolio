@@ -39,6 +39,7 @@ $(document).ready(function() {
         onLeave: function() {
             let activeSection = $(".fp-section.active")
             if ($(activeSection)) {
+                /** Animation on text**/
                 let tl = anime.timeline({
                     duration: 1500,
                     delay:50,
@@ -56,6 +57,12 @@ $(document).ready(function() {
                     targets: ".subTitle",
                     translateX: [-700, 0]
                 },400)
+                tl.add({
+                    targets: ".stuff",
+                    translateX: [700, 0]
+                },400)
+               /** Animation on right of page**/
+
             }
 
 
