@@ -64,12 +64,10 @@ main{
 }
 
 /** Section **/
-section{
-    height: 100vh;
-    width:100%;
-}
+
 .section{
     height: 100vh;
+    width:100%;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -81,6 +79,7 @@ section{
     display: flex;
     flex-direction: column;
     gap :10%;
+    margin-left: 20px;
 
 }
 
@@ -92,9 +91,9 @@ section{
 
 }
 
-#image{
-    display: inline-block;
-    margin-right: 50px;
+img #image{
+    display: block;
+
 }
 
 h2{
@@ -171,9 +170,15 @@ a :hover{
 
 /** Animation **/
 
-.black{
-    color: black;
-background-color: black;
+.hidden{
+    visibility: hidden;
 }
 
+.fp-section{
+    visibility: hidden;
+    transition: linear 2s;
+}
 
+.fp-section.active{
+    visibility: visible;
+}
