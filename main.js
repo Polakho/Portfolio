@@ -11,20 +11,23 @@ $(document).ready(function() {
         scrollingSpeed: 1e3,
         sectionSelector: "section",
         fitToSectionDelay: 1000,
-        easingcss3: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+
 
         afterRender:  () => {
             let activeSection = $(".fp-section.active")
             if ($(activeSection)) {
                let tl = anime.timeline({
                     duration: 1000,
-                    delay:100,
                     easing: 'easeInOutCubic',
                 });
+                tl.add({
+                    targets : ".loader",
+                    translateY : -1000,
+                })
                tl.add({
                    targets: ".title",
                    translateX: [-700, 0]
-               })
+               },100)
                 tl.add({
                     targets: ".decoLines",
                     translateX: [-700, 0]
@@ -33,7 +36,13 @@ $(document).ready(function() {
                     targets: ".subTitle",
                     translateX: [-700, 0]
                 },400)
+                tl.add({
+                    targets: "#image",
+                    translateX: [100, 0],
+                    scale: [0,1],
+                },400)
             }
+
         },
 
         onLeave: function() {
@@ -41,8 +50,8 @@ $(document).ready(function() {
             if ($(activeSection)) {
                 /** Animation on text**/
                 let tl = anime.timeline({
-                    duration: 1500,
-                    delay:50,
+                    duration: 1000,
+
                     easing: 'easeInOutCubic',
                 });
                 tl.add({
@@ -57,16 +66,13 @@ $(document).ready(function() {
                     targets: ".subTitle",
                     translateX: [-700, 0]
                 },400)
+                /** Animation on right of page**/
                 tl.add({
                     targets: ".stuff",
-                    translateX: [700, 0]
+                    translateX: [700, 0],
+                    scale: [0,1],
                 },400)
-               /** Animation on right of page**/
-
             }
-
-
-
             /** gsap.from('.text .title', { duration: 1, ease:"power3.out", x:-700, z:-100,},)
              gsap.from('.decoLines span', {duration: 0.8,ease:"power3.out", x:-500, stagger:0.2,})
              gsap.from('.section h2', {duration: 1.4,ease:"power3.out", x:-500,})
