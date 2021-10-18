@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: burlywood;
+    background-color: #0D0D0C;
     min-height: 100vh;
     min-width: 100vh;
     display:flex;
@@ -20,7 +20,7 @@ body{
     height:100%;
     background-color: black;
 }
-/** Header **/
+        /** HEADER **/
 header{
     display:flex;
     justify-content: space-between;
@@ -43,14 +43,19 @@ header{
     text-decoration: none;
     color: white;
 }
+
 .name{
     color: white;
     display: flex;
     align-items: center;
-    font-size:20px;
-    font-family: 'Futura_r', sans-serif;    letter-spacing: 0.065em;
+    font-size:1.6em;
+    font-family: 'Futura', sans-serif;
+    letter-spacing: 0.050em;
     width:auto;
     padding-left: 30px;
+}
+.name a {
+
 }
 .tablogos{
     padding-right: 30px;
@@ -60,7 +65,7 @@ header{
     flex-direction: row-reverse;
 }
 
-/** Main **/
+    /** MAIN **/
 
 main{
     overflow: hidden;
@@ -71,7 +76,7 @@ main{
     width: 100%;
 }
 
-/** Section **/
+    /** SECTION **/
 
 .section{
     height: 100vh;
@@ -88,29 +93,17 @@ main{
     flex-direction: column;
     gap :10%;
     margin-left: 20px;
-
 }
 
 .stuff{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 25%;
-}
-
-.stuff.contactLinks{
     flex-direction: column;
     justify-content: space-around;
-    gap: 10%;
-    height: auto;
-}
+    align-items: center;
+    margin-right: 25%;
 
-h2{
-    letter-spacing: 0.1em;
-    color:white;
-    font-family: "Roboto Slab", serif;
-    font-size: 2em;
-    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5)
+    height : 500px;
+
 }
 
 .title{
@@ -128,7 +121,7 @@ h2{
 }
 .decoLines span{
     display:inline-block;
-    background: darkslateblue;
+    background: darkorange;
     height:5px;
     width: 100px;
     border-radius: 10px;
@@ -137,7 +130,16 @@ h2{
 .decoLines .secondSpan{
     margin-left: 50px;
 }
-/** MENU **/
+
+h2{
+    letter-spacing: 0.1em;
+    color:white;
+    font-family: "Roboto Slab", serif;
+    font-size: 2em;
+    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5)
+}
+
+    /** MENU **/
 
 #fp-nav{
     display: flex;
@@ -175,12 +177,13 @@ h2{
     display: none;
 }
 
-/** Button **/
+    /** BUTTON **/
 
 button{
     color: white;
-    background-color: darkslateblue;
-    font-family: 'Rubik', sans-serif;    text-decoration: none;
+    background-color: darkorange;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
     font-size: 1.2em;
     height: 50px;
     width: auto;
@@ -194,8 +197,56 @@ button a{
     text-decoration: none;
     color: white
 }
+    /** WHY PAGE **/
 
-/** Animation **/
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap :10%;
+    height : 200px;
+}
+
+.links h3{
+    font-size: 1.7em;
+    font-family: 'Roboto Thin', serif;
+    color: white;
+}
+
+    /** CONTACT PAGE **/
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap : 10%;
+    height: 100px;
+    color: white;
+    font-family: "Roboto Thin", serif;
+    font-size: 1.9em;
+    letter-spacing: 0.1em;
+}
+.logos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap :15%;
+}
+.contactLinks {
+    display: flex;
+    height: 200px;
+    width: content-box;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+.contactLinks a {
+    text-decoration: none;
+    color: darkorange;
+    font-family: "Roboto Thin", serif;
+}
+    /** ANIMATION **/
 
 a :hover{
     opacity: 0.5;

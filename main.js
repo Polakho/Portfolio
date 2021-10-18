@@ -78,7 +78,6 @@ $(document).ready(function() {
              gsap.from('.section h2', {duration: 1.4,ease:"power3.out", x:-500,})
              **/
         },
-
     });
 });
 
