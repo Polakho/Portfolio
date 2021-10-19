@@ -11,7 +11,6 @@ $(document).ready(function() {
         scrollingSpeed: 1000,
         sectionSelector: "section",
         fitToSectionDelay: 1000,
-        easingcss3: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
         animateAnchor: !1,
 
         afterRender:  () => {
@@ -87,12 +86,30 @@ $(document).ready(function() {
                     scale: [0,1],
                 },400)
             }
-            /** gsap.from('.text .title', { duration: 1, ease:"power3.out", x:-700, z:-100,},)
-             gsap.from('.decoLines span', {duration: 0.8,ease:"power3.out", x:-500, stagger:0.2,})
-             gsap.from('.section h2', {duration: 1.4,ease:"power3.out", x:-500,})
-             **/
         },
     });
 });
+
+let $window = $(window)
+let p = $(".secondPage").offset().top
+
+$window.scroll(function (){
+    if($window.scrollTop() >= p){
+        $("header").addClass("black")
+        $("#linkedin").attr("src","images/linkedin-black.png")
+        $("#gitHub").attr("src","images/gitHub-black.png")
+        $("#gmail").attr("src","images/gmail-black.png")
+        $("#resume").attr("src","images/resume-black.png")
+    }else{
+        $("header").removeClass("black")
+        $("#linkedin").attr("src","images/linkedin.png")
+        $("#gitHub").attr("src","images/gitHub.png")
+        $("#gmail").attr("src","images/gmail.png")
+        $("#resume").attr("src","images/resume.png")
+
+    }
+
+
+})
 
 
