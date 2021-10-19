@@ -6,12 +6,13 @@ $(document).ready(function() {
         behavior: 'smooth',
         fixedElements: 'header, #menu',
         menu: '#fp-nav',
-        navigation: true,
+        navigation: !0,
         anchors : ["home","aboutMe","why","contact"],
-        scrollingSpeed: 1e3,
+        scrollingSpeed: 1000,
         sectionSelector: "section",
         fitToSectionDelay: 1000,
-
+        easingcss3: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+        animateAnchor: !1,
 
         afterRender:  () => {
             let activeSection = $(".fp-section.active")
@@ -33,6 +34,10 @@ $(document).ready(function() {
                     translateX: [-700, 0]
                 },200)
                 tl.add({
+                    targets:".secondSpan",
+                    translateX: [-700, 0]
+                },300)
+                tl.add({
                     targets: ".subTitle",
                     translateX: [-700, 0]
                 },400)
@@ -42,7 +47,6 @@ $(document).ready(function() {
                     scale: [0,1],
                 },400)
             }
-
         },
 
         onLeave: function() {
@@ -51,22 +55,32 @@ $(document).ready(function() {
                 /** Animation on text **/
                 let tl = anime.timeline({
                     duration: 1000,
-
                     easing: 'easeInOutCubic',
                 });
                 tl.add({
                     targets: ".title",
-                    translateX: [-700, 0]
-                })
+                    translateX: [-1000, 0]
+                },100)
                 tl.add({
                     targets: ".decoLines",
                     translateX: [-700, 0]
                 },200)
                 tl.add({
+                    targets:".secondSpan",
+                    translateX: [-700, 0]
+                },300)
+                tl.add({
                     targets: ".subTitle",
                     translateX: [-700, 0]
                 },400)
                 /** Animation on right of page **/
+                tl.add({
+                    targets : ".aboutAlex",
+                    translateX: [100, 0],
+                    translateY: [-100,0],
+                    scale: [0.6,1],
+                    opacity : [0.6,1],
+                },400)
                 tl.add({
                     targets: ".stuff",
                     translateX: [700, 0],

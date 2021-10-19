@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #0D0D0C;
+    background-color:#202023;
     min-height: 100vh;
     min-width: 100vh;
     display:flex;
@@ -18,7 +18,7 @@ body{
     top: 0;
     width: 100%;
     height:100%;
-    background-color: black;
+    background-color: darkorange;
 }
         /** HEADER **/
 header{
@@ -49,10 +49,11 @@ header{
     display: flex;
     align-items: center;
     font-size:1.6em;
-    font-family: 'Futura', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.050em;
     width:auto;
     padding-left: 30px;
+    z-index: 1000;
 }
 .name a {
 
@@ -93,24 +94,27 @@ main{
     flex-direction: column;
     gap :10%;
     margin-left: 20px;
+    z-index: 5;
+    height: 50%;
+    width: 50%;
 }
 
 .stuff{
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     margin-right: 25%;
-
     height : 500px;
-
+    z-index: 4;
 }
 
 .title{
     text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
     color:white;
-    font-family: "Roboto Thin", serif;
-    font-size: 4em;
+    font-family: "Montserrat", serif;
+    font-size: 4.9em;
 }
 
 .decoLines{
@@ -180,9 +184,9 @@ h2{
     /** BUTTON **/
 
 button{
-    color: white;
-    background-color: darkorange;
-    font-family: 'Rubik', sans-serif;
+    color: darkorange;
+    background-color: #ffdfd0;
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     font-size: 1.2em;
     height: 50px;
@@ -191,12 +195,38 @@ button{
     padding-left: 20px;
     border-radius: 20px;
     transition: .1s ease-in-out 0s;
+    border : none;
+    cursor: pointer;
+    z-index: 4;
 }
 
 button a{
     text-decoration: none;
-    color: white
+    color: darkorange;
 }
+        /** HOME **/
+
+.portfolio{
+    color: darkorange;
+    font-size: 4em;
+
+}
+
+    /** ABOUT ME PAGE **/
+
+.aboutAlex{
+    right:15%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    height: 100vh;
+}
+
+.aboutBtn {
+    position: relative;
+    top: -20%;
+}
+
     /** WHY PAGE **/
 
 .links{
@@ -209,7 +239,7 @@ button a{
 
 .links h3{
     font-size: 1.7em;
-    font-family: 'Roboto Thin', serif;
+    font-family: 'Montserrat', serif;
     color: white;
 }
 
@@ -224,7 +254,7 @@ button a{
     height: 100px;
     color: white;
     font-family: "Roboto Thin", serif;
-    font-size: 1.9em;
+    font-size: 1.8em;
     letter-spacing: 0.1em;
 }
 .logos{
@@ -236,15 +266,14 @@ button a{
 .contactLinks {
     display: flex;
     height: 200px;
-    width: content-box;
-    background-color: white;
+    background-color: #ffdfd0;
     padding: 20px;
     border-radius: 5px;
 }
 .contactLinks a {
     text-decoration: none;
     color: darkorange;
-    font-family: "Roboto Thin", serif;
+    font-family: "Montserrat", serif;
 }
     /** ANIMATION **/
 
