@@ -91,6 +91,8 @@ $(document).ready(function() {
 });
 
 
+
+$(".sp").ready(function(){
     let $window = $(window)
     let p = $(".secondPage").offset().top
 
@@ -109,9 +111,10 @@ $(document).ready(function() {
             $("#gitHub").attr("src", "images/gitHub.png")
             $("#gmail").attr("src", "images/gmail.png")
             $("#resume").attr("src", "images/resume.png")
-
         }
     })
+})
+
 
 
 
