@@ -90,26 +90,30 @@ $(document).ready(function() {
     });
 });
 
-let $window = $(window)
-let p = $(".secondPage").offset().top
 
-$window.scroll(function (){
-    if($window.scrollTop() >= p){
-        $("header").addClass("black")
-        $("#linkedin").attr("src","images/linkedin-black.png")
-        $("#gitHub").attr("src","images/gitHub-black.png")
-        $("#gmail").attr("src","images/gmail-black.png")
-        $("#resume").attr("src","images/resume-black.png")
-    }else{
-        $("header").removeClass("black")
-        $("#linkedin").attr("src","images/linkedin.png")
-        $("#gitHub").attr("src","images/gitHub.png")
-        $("#gmail").attr("src","images/gmail.png")
-        $("#resume").attr("src","images/resume.png")
+    let $window = $(window)
+    let p = $(".secondPage").offset().top
 
-    }
+    $window.scroll(function () {
+        if ($window.scrollTop() >= p) {
+            $("header").addClass("black")
+            $("#arrow").attr("src", "images/arrow-black.png")
+            $("#linkedin").attr("src", "images/linkedin-black.png")
+            $("#gitHub").attr("src", "images/gitHub-black.png")
+            $("#gmail").attr("src", "images/gmail-black.png")
+            $("#resume").attr("src", "images/resume-black.png")
+        } else {
+            $("header").removeClass("black")
+            $("#arrow").attr("src", "images/arrow.png")
+            $("#linkedin").attr("src", "images/linkedin.png")
+            $("#gitHub").attr("src", "images/gitHub.png")
+            $("#gmail").attr("src", "images/gmail.png")
+            $("#resume").attr("src", "images/resume.png")
+
+        }
+    })
 
 
-})
+
 
 

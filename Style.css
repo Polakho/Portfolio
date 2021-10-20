@@ -289,6 +289,11 @@ button:hover{
   transform: scale(1.2);
 }
 
+.tablogos a{
+    -webkit-transition:0.3s;
+    -o-transition:0.3s;
+    transition:0.3s;
+}
 
 
 
@@ -296,11 +301,35 @@ button:hover{
 
     /** SECOND PAGE **/
 
+        /** GENERAL **/
 .sp main{
     overflow: scroll;
     height: 100%;
     overflow-x: hidden;
 }
+
+header.black a{
+    color: #020b16;
+}
+
+#arrow{
+    position: fixed;
+    top: 15%;
+    left: 5%;
+    -webkit-transition:0.3s;
+    -o-transition:0.3s;
+    transition:0.3s;
+}
+
+#arrow:hover{
+    transform: translateX(-10px);
+}
+
+footer{
+    height: 1000px;
+}
+
+        /** FIRST **/
 
 .aboutMe{
     height:100vh;
@@ -310,19 +339,22 @@ button:hover{
     align-items: center;
     margin-left: 13%;
 }
-
+        /** SECOND : ME **/
 .secondPage{
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.box{
+.boxMe{
     margin: 20% 15% 3% 15%;
     text-align: center;
     display: flex;
     justify-content: center;
 }
 
-.box h2{
+.boxMe h2{
     color: #202023;
     font-size: 2.5em;
     text-shadow: none;
@@ -339,7 +371,95 @@ button:hover{
     color: #858f99;
 }
 
- header.black a{
-     color: #020b16;
+        /** THIRD : PASSION & SKILLS **/
+
+.boxPassionSkills{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 10%;
+
 }
 
+.passion, .skills{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    width: 100%;
+}
+
+.sport, .travel, .hard, .soft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    width: 30%;
+}
+.image{
+    align-items: baseline;
+}
+.boxPassionSkills h3{
+    margin-top: 5%;
+    color: darkorange;
+    font-family: "Roboto Slab", serif;
+    font-size: 3.2rem;
+}
+
+.boxPassionSkills p{
+    text-align: justify;
+    margin-top: 5%;
+    color: #858f99;
+    font-family: Montserrat, serif;
+    font-size: 1em;
+}
+
+        /** Card **/
+
+.containerCard {
+    position: relative;
+}
+
+.containerCard .card {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #ffdfd0;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+}
+
+.containerCard:hover .card {
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    padding : 20px;
+}
+
+.containerCard .card .imgBx  {
+    transition: 0.5s ease-in-out;
+    display: none;
+}
+
+.containerCard:hover .card .imgBx  {
+    transition-delay: 0.05s;
+    display: block;
+}
+
+.containerCard .card:after {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.containerCard:hover .card:after {
+    opacity: 1;
+    visibility: visible;
+}
