@@ -49,6 +49,7 @@ $(document).ready(function() {
         },
 
         onLeave: function() {
+
             let activeSection = $(".fp-section.active")
             if ($(activeSection)) {
                 /** Animation on text **/
@@ -69,7 +70,15 @@ $(document).ready(function() {
                     translateX: [-700, 0]
                 },300)
                 tl.add({
+                    targets:".scrollDown",
+                    translateX: [-200,0],
+                },200)
+                tl.add({
                     targets: ".subTitle",
+                    translateX: [-700, 0]
+                },400)
+                tl.add({
+                    targets: ".aboutBtn",
                     translateX: [-700, 0]
                 },400)
                 /** Animation on right of page **/

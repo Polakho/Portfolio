@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #4a76c4;
+
+    background-image: url("images/blue.png");
+    background-size: cover;
     min-height: 100vh;
     min-width: 100vh;
     display:flex;
@@ -99,7 +101,7 @@ main{
     flex-direction: column;
     gap :10%;
     margin-left: 20px;
-    z-index: 5;
+    z-index: 4;
     height: 50%;
     width: 50%;
 }
@@ -217,19 +219,43 @@ button a{
     text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5)
 }
 
+.scrollDown{
+    position: fixed;
+    left:20px;
+    bottom:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollDown p{
+    left:20px;
+    bottom:20px;
+    font-family: Montserrat, serif;
+    color: white;
+    writing-mode: vertical-lr;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+}
+
     /** ABOUT ME PAGE **/
 
 .aboutAlex{
-    right:15%;
     position: absolute;
     overflow: hidden;
     z-index: 0;
-    height: 100vh;
+    margin-left: 30%;
+    height: 70%;
+    box-shadow: 10px 10px 35px 0 rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 35px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 35px 0 rgba(0,0,0,0.75);
 }
 
 .aboutBtn {
     position: relative;
-    top: -20%;
+    top: 34%;
+    right:40%;
 }
 
     /** WHY PAGE **/
@@ -314,7 +340,7 @@ button:hover{
 
         /** GENERAL **/
 .sp main{
-    overflow: scroll;
+
     height: 100%;
     overflow-x: hidden;
 }
@@ -327,28 +353,32 @@ header.black a{
     position: fixed;
     top: 15%;
     left: 5%;
-    -webkit-transition:0.3s; /*Boulles giga boulles pac-pac qui fait des maison dans la forêt et qu*/
+    -webkit-transition:0.3s;
     -o-transition:0.3s;
     transition:0.3s;
 }
 
-#arrow:hover{
+#arrow:hover {
     transform: translateX(-10px);
 }
- footer{
+footer{
      height: 100px;
      background-color: white;
  }
         /** FIRST **/
 
-.aboutMe{
+.sp .aboutMe{
+    background-image: url("images/blue.png");
+    background-size: cover;
     height:100vh;
     width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: 13%;
+
 }
+
         /** SECOND : ME **/
 .secondPage{
     background-color: white;
@@ -379,6 +409,7 @@ header.black a{
     margin-top: 5%;
     font-family: Montserrat, serif;
     color: #858f99;
+    text-align: justify;
 }
 
         /** THIRD : PASSION & SKILLS **/
