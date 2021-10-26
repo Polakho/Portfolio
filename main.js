@@ -15,7 +15,7 @@ $(document).ready(function() {
 
         afterRender:  () => {
             let activeSection = $(".fp-section.active")
-            if ($(activeSection)) {
+
                let tl = anime.timeline({
                     duration: 1000,
                     easing: 'easeInOutCubic',
@@ -45,10 +45,11 @@ $(document).ready(function() {
                     translateX: [100, 0],
                     scale: [0,1],
                 },400)
-            }
+
         },
 
         onLeave: function() {
+
             let activeSection = $(".fp-section.active")
             if ($(activeSection)) {
                 /** Animation on text **/
@@ -69,7 +70,15 @@ $(document).ready(function() {
                     translateX: [-700, 0]
                 },300)
                 tl.add({
+                    targets:".scrollDown",
+                    translateX: [-200,0],
+                },200)
+                tl.add({
                     targets: ".subTitle",
+                    translateX: [-700, 0]
+                },400)
+                tl.add({
+                    targets: ".aboutBtn",
                     translateX: [-700, 0]
                 },400)
                 /** Animation on right of page **/
@@ -115,6 +124,37 @@ $(".sp").ready(function(){
     })
 })
 
+$(document).ready(function (){
+    const ratio = 0.5;
+    let options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: ratio
+    };
+
+    const handleIntersect = function(entries,observer) {
+        entries.forEach(function (entry){
+            if(entry.intersectionRatio > ratio){
+                entry.target.classList.add('reveal-visible')
+                observer.unobserve(entry.target)
+            }
+        })
+    }
+
+    const observer = new IntersectionObserver(handleIntersect, options);
+    document.querySelectorAll(".reveal").forEach(function (r){
+        observer.observe(r)
+    })
+})
+
+
+$(".containerCard").hover(
+    function(){
+        $(this).removeClass("pulse");
+    }, function (){
+        $(this).addClass("pulse");
+    }
+);
 
 
 
